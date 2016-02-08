@@ -1,0 +1,3 @@
+usr/include/jreen-qt4/*
+usr/lib/*/libjreen.so
+usr/lib/*/pkgconfig/libjreen.pc

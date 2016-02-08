@@ -1,0 +1,3 @@
+usr/include/jreen-qt5/*
+usr/lib/*/libjreen-qt5.so
+usr/lib/*/pkgconfig/libjreen-qt5.pc

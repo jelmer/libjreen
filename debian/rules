@@ -1,0 +1,42 @@
+#!/usr/bin/make -f
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+QT4_PATH = build/qt4/so
+QT5_PATH = build/qt5/so
+
+%:
+	dh $@ --parallel
+	
+override_dh_auto_configure:
+	mkdir -p $(QT4_PATH) $(QT5_PATH)
+	
+	# Qt4 builds
+	QT_SELECT=qt4 dh_auto_configure -B$(QT4_PATH) -- -DLIB_SUFFIX=/$(DEB_HOST_MULTIARCH) -DJREEN_USE_SYSTEM_JDNS=ON -DJREEN_FORCE_QT4=ON -DQJDNS_SUFFIX=-qt4
+
+	# Qt5 builds 
+	QT_SELECT=qt5 dh_auto_configure -B$(QT5_PATH) -- -DLIB_SUFFIX=/$(DEB_HOST_MULTIARCH) -DJREEN_USE_SYSTEM_JDNS=ON -DQJDNS_SUFFIX=-qt5
+
+override_dh_auto_build:
+	# Qt4 builds - make (dynamic and static)
+	QT_SELECT=qt4 dh_auto_build -B$(QT4_PATH)
+
+	# Qt5 builds - make (dynamic and static)
+	QT_SELECT=qt5 dh_auto_build -B$(QT5_PATH)
+	
+override_dh_auto_clean:
+	dh_auto_clean -B$(QT4_PATH)
+	dh_auto_clean -B$(QT5_PATH)
+
+override_dh_auto_install:
+	# Install Qt4 packages
+	dh_auto_install -B$(QT4_PATH)
+
+	# Install Qt5 packages
+	dh_auto_install -B$(QT5_PATH)
+
+override_dh_strip:
+	dh_strip -plibjreen1 --dbg-package=libjreen-dbg
+	dh_strip -plibjreen-qt5-1 --dbg-package=libjreen-qt5-dbg
+
+override_dh_install:
+	dh_install --list-missing

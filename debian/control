@@ -1,0 +1,91 @@
+Source: jreen
+Section: libs
+Priority: optional
+Maintainer: Stefan Ahlers <stef.ahlers@t-online.de>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libgsasl7-dev,
+               libidn11-dev,
+               libqca2-dev,
+               libqt4-dev,
+               qtbase5-dev,
+               zlib1g-dev,
+               libqjdns-qt5-dev,
+               libqjdns-qt4-dev,
+               libjdns-dev
+Standards-Version: 3.9.6
+Homepage: https://qutim.org/jreen
+Vcs-Git: git://github.com/justin-time/libjreen.git
+Vcs-Browser: https://github.com/justin-time/libjreen
+
+Package: libjreen1
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: powerful Jabber/XMPP library implemented in Qt4/C++
+ Jreen is an extensible Qt4-based asynchronious Jabber library.
+
+Package: libjreen-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libjreen1 (= ${binary:Version}), ${misc:Depends}
+Description: powerful Jabber/XMPP library (Qt4 build) - development files
+ Jreen is a lightweight XMPP library, implementing a large amount
+ of protocol extensions (XEP). It is fit with Qt coding paradigms,
+ so a Qt4 application developer can easily use any XMPP features.
+ .
+ This package contains the files that are needed to develop Qt4-based 
+ applications that use jreen.
+ 
+Package: libjreen-qt5-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libjreen-qt5-1 (= ${binary:Version}),
+         ${misc:Depends}
+Description: powerful Jabber/XMPP library (Qt5 build) - development files
+ Jreen is a lightweight XMPP library, implementing a large amount
+ of protocol extensions (XEP). It is fit with Qt coding paradigms,
+ so a Qt5 application developer can easily use any XMPP features.
+ .
+ This package provides development headers for the library. 
+
+Package: libjreen-qt5-1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: powerful Jabber/XMPP library implemented in Qt5/C++
+ Jreen is a lightweight XMPP library, implementing a large amount
+ of protocol extensions (XEP). It is fit with Qt coding paradigms,
+ so a Qt5 application developer can easily use any XMPP features.
+
+Package: libjreen-dbg
+Section: debug
+Architecture: any
+Priority: extra
+Multi-Arch: same
+Depends: libjreen1 (= ${binary:Version}), ${misc:Depends}
+Description: powerful Jabber/XMPP library (Qt4 build) - debugging symbols
+ Jreen is a lightweight XMPP library, implementing a large amount
+ of protocol extensions (XEP). It is fit with Qt coding paradigms,
+ so a Qt4 application developer can easily use any XMPP features.
+ .
+ This package contains the debugging symbols for debugging crashes in the
+ jreen library
+ 
+Package: libjreen-qt5-dbg
+Section: debug
+Architecture: any
+Priority: extra
+Multi-Arch: same
+Depends: libjreen-qt5-1 (= ${binary:Version}), ${misc:Depends}
+Description: powerful Jabber/XMPP library (Qt5 build) - debugging symbols
+ Jreen is a lightweight XMPP library, implementing a large amount
+ of protocol extensions (XEP). It is fit with Qt coding paradigms,
+ so a Qt5 application developer can easily use any XMPP features.
+ .
+ This package contains the debugging symbols for debugging crashes in the
+ jreen library

@@ -1,0 +1,6 @@
+jreen (1.2.0-1) unstable; urgency=medium
+
+  * Initial release to Debian. (Closes: #648668)
+  * Add multiarch support.
+  
+ -- Stefan Ahlers <stef.ahlers@t-online.de>  Mon, 08 Feb 2016 15:50:50 +0100

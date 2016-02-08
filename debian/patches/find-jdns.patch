@@ -1,0 +1,14 @@
+Description: To find the correct qjdns a Qt-Suffix is necessary.
+Author: Stefan Ahlers <stef.ahlers@t-online.de>
+Last-Update: 2015-11-20
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -115,7 +115,7 @@
+         if(NOT LINUX)
+                 find_package(PkgConfig)
+         endif()
+-        pkg_search_module(JDNS REQUIRED qjdns)
++        pkg_search_module(JDNS REQUIRED qjdns${QJDNS_SUFFIX})
+         include_directories(${JDNS_INCLUDE_DIR})
+         list(APPEND EXTRA_LIBS ${JDNS_LIBRARIES})
+     else()

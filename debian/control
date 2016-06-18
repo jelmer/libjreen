@@ -13,7 +13,7 @@ Build-Depends: cmake,
                libqjdns-qt5-dev,
                libqjdns-qt4-dev,
                libjdns-dev
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://qutim.org/jreen
 Vcs-Git: git://github.com/justin-time/libjreen.git
 Vcs-Browser: https://github.com/justin-time/libjreen

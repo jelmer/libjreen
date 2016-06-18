@@ -1,3 +1,10 @@
+jreen (1.2.0-2) unstable; urgency=medium
+
+  * Add jreen-qt56.patch to fix build error with Qt 5.6. (Closes: #827585)
+  * Update standard version from 3.9.6 to 3.9.8.
+  
+ -- Stefan Ahlers <stef.ahlers@t-online.de>  Sat, 18 Jun 2016 15:50:50 +0200
+
 jreen (1.2.0-1) unstable; urgency=medium
 
   * Initial release to Debian. (Closes: #648668)

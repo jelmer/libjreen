@@ -1,0 +1,18 @@
+Description: Fix building jreen with Qt 5.6 and newer.
+Origin: http://pkgs.fedoraproject.org/cgit/rpms/jreen.git/commit/?id=bd9ec5ded9ecf3479cfbe1068f99a7fb16a4286e
+Author: Rex Dieter <rdieter@math.unl.edu>
+Last-Update: 2015-11-20
+--- a/src/stanzaextension.h
++++ b/src/stanzaextension.h
+@@ -28,7 +28,11 @@
+ 
+ #include <QObject>
+ #include <QSharedPointer>
++#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
+ #include <QMetaTypeId>
++#else
++#include <QMap>
++#endif
+ #include "jreen.h"
+ 
+ class QXmlStreamWriter;

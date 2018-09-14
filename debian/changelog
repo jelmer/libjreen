@@ -1,3 +1,9 @@
+jreen (1.2.0-3) UNRELEASED; urgency=medium
+
+  * Use secure URI in Vcs control header.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 14 Sep 2018 11:06:52 +0100
+
 jreen (1.2.0-2) unstable; urgency=medium
 
   * Add jreen-qt56.patch to fix build error with Qt 5.6. (Closes: #827585)

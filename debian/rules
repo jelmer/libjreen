@@ -35,8 +35,8 @@ override_dh_auto_install:
 	dh_auto_install -B$(QT5_PATH)
 
 override_dh_strip:
-	dh_strip -plibjreen1 --dbg-package=libjreen-dbg
-	dh_strip -plibjreen-qt5-1 --dbg-package=libjreen-qt5-dbg
+	dh_strip -plibjreen1 --dbgsym-migration='libjreen-dbg (<= 1.2.0-2)'
+	dh_strip -plibjreen-qt5-1 --dbgsym-migration='libjreen-qt5-dbg (<= 1.2.0-2)'
 
 override_dh_install:
 	dh_install --list-missing

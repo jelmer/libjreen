@@ -1,3 +1,10 @@
+jreen (1.2.0-3) UNRELEASED; urgency=medium
+
+  * Transition to automatic debug packages (from: libjreen-dbg, libjreen-
+    qt5-dbg).
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 09 Oct 2018 00:23:59 +0000
+
 jreen (1.2.0-2) unstable; urgency=medium
 
   * Add jreen-qt56.patch to fix build error with Qt 5.6. (Closes: #827585)

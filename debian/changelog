@@ -2,6 +2,7 @@ jreen (1.2.0-3) UNRELEASED; urgency=medium
 
   * Transition to automatic debug packages (from: libjreen-dbg, libjreen-
     qt5-dbg).
+  * Use secure URI in Vcs control header.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 09 Oct 2018 00:23:59 +0000
 

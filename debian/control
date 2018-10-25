@@ -5,7 +5,7 @@ Maintainer: Stefan Ahlers <stef.ahlers@t-online.de>
 Build-Depends: cmake, debhelper (>= 9.20160114), libgsasl7-dev, libidn11-dev, libqca2-dev, libqt4-dev, qtbase5-dev, zlib1g-dev, libqjdns-qt5-dev, libqjdns-qt4-dev, libjdns-dev
 Standards-Version: 3.9.8
 Homepage: https://qutim.org/jreen
-Vcs-Git: git://github.com/justin-time/libjreen.git
+Vcs-Git: https://github.com/justin-time/libjreen.git
 Vcs-Browser: https://github.com/justin-time/libjreen
 
 Package: libjreen1

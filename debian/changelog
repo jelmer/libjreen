@@ -3,6 +3,7 @@ jreen (1.2.0-3) UNRELEASED; urgency=medium
   * Transition to automatic debug packages (from: libjreen-dbg, libjreen-
     qt5-dbg).
   * Use secure URI in Vcs control header.
+  * Trim trailing whitespace.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 09 Oct 2018 00:23:59 +0000
 
@@ -10,12 +11,12 @@ jreen (1.2.0-2) unstable; urgency=medium
 
   * Add jreen-qt56.patch to fix build error with Qt 5.6. (Closes: #827585)
   * Update standard version from 3.9.6 to 3.9.8.
-  
+
  -- Stefan Ahlers <stef.ahlers@t-online.de>  Sat, 18 Jun 2016 15:50:50 +0200
 
 jreen (1.2.0-1) unstable; urgency=medium
 
   * Initial release to Debian. (Closes: #648668)
   * Add multiarch support.
-  
+
  -- Stefan Ahlers <stef.ahlers@t-online.de>  Mon, 08 Feb 2016 15:50:50 +0100
